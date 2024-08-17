@@ -1,4 +1,4 @@
-{% set version = '0.17.0' %}
+{% set version = "0.18.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/coursekata_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coursekata/coursekata_{{ version }}.tar.gz
-  sha256: 7090b497110a730ca44023dc23e649a963574187c734bb61cfe757bc3ef9103c
+  sha256: 8e7b7f25b36f054b7f7cfa766e106ff7a84168bcd7a1d7a87a4ee4ae515c3817
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -32,9 +32,9 @@ requirements:
     - r-glue >=1.6.2
     - r-lsr >=0.5.2
     - r-mosaic >=1.8.3
-    - r-pak
     - r-palmerpenguins
     - r-purrr >=0.3.4
+    - r-remotes
     - r-rlang >=1.0.2
     - r-supernova >=2.5.1
     - r-vctrs >=0.4.1
@@ -49,9 +49,9 @@ requirements:
     - r-glue >=1.6.2
     - r-lsr >=0.5.2
     - r-mosaic >=1.8.3
-    - r-pak
     - r-palmerpenguins
     - r-purrr >=0.3.4
+    - r-remotes
     - r-rlang >=1.0.2
     - r-supernova >=2.5.1
     - r-vctrs >=0.4.1
@@ -65,9 +65,7 @@ test:
 about:
   home: https://github.com/coursekata/coursekata-r
   license: AGPL-3.0-or-later
-  summary: Easily install and load all packages and functions used in 'CourseKata' courses. Aid
-    teaching with helper functions and augment generic functions to provide cohesion
-    between the network of packages. Learn more about 'CourseKata' at <https://coursekata.org>.
+  summary: Easily install and load all packages and functions used in 'CourseKata' courses. Aid teaching with helper functions and augment generic functions to provide cohesion between the network of packages. Learn more about 'CourseKata' at <https://coursekata.org>.
   license_family: AGPL
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/AGPL-3'
