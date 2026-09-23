@@ -1,4 +1,4 @@
-{% set version = "0.20.1" %}
+{% set version = "0.21.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/coursekata_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coursekata/coursekata_{{ version }}.tar.gz
-  sha256: 4692473b6edeae18e75c4216a6ce245dec19ae16222f369d1b8c8e7ce38357fa
+  sha256: 2c96089c24975de427793978c25d279d17fb5121ac179c53eabe047ba7f36728
 
 build:
   number: 0
